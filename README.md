@@ -5,10 +5,10 @@ Mixed messages generator that emulates fortune cookie messages
 <kbd><img src="mixed-messages-ld.gif" alt="live demo gif"></kbd>
 
 ## Instructions
-* feel free to clone this repo <a href="https://github.com/daryldelrosario/cc-mixed-messages.git">`Clone`</a>
+* clone this repo
 * using your software run file script.js
 
-Please note: 
+Note: 
 * this code demo uses Node.js
 * ran via vscode terminal through command `node script.js`
 
