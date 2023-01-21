@@ -17,4 +17,6 @@ Please note:
     1. colors with 7 variations
     2. quotes with 7 variations
     3. 7 unique lucky numbers chosen from 1 - 50
-* includes function to generate an array of chosen length and range of numbers `fillLuckyNums(spots, choice)`
+* includes function `fillLuckyNums(spots, choice)`: 
+    * generate an array with length `spots`
+    * fills in each index with a number between 1 and `choice`
