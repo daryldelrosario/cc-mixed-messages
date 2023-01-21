@@ -1,7 +1,13 @@
 // Function: picks a random number from 1 to num
 const pickOneTo = num => {
-    let random = Math.floor(Math.random() * num) + 1;
-    return random;
+    let randomNum = Math.floor(Math.random() * num) + 1;
+    return randomNum;
+}
+
+// Function: picks a random index from 0 to lengthMinusOne
+const pickRandomIndex = lengthMinusOne => {
+    let randomIndex = Math.floor(Math.random() * lengthMinusOne);
+    return randomIndex;
 }
 
 // Function: turns luckyNums[] into an array with length 'spots' filled with random numbers (1 to 'choice')
@@ -52,6 +58,31 @@ const luckyNums = [];
 // Fills luckyNums[] with 7 lucky numbers (1 - 50) for LottoMax 
 fillLuckyNums(7, 50);
 
-// Testing Features
-console.log(luckyNums.join(" "));
+// Helper Function: Displays cool message
+const printMsg = msg => {
+    let msgLength = msg.length;
+    console.log("=".repeat(msgLength));
+    console.log(msg);
+    console.log("=".repeat(msgLength));
+}
 
+// Main Function: Creates the random message to display
+const message = () => {
+    let colorIndex = pickRandomIndex(color.length - 1);
+    let quoteIndex = pickRandomIndex(quote.length - 1);
+    let winningNums = luckyNums.join(" ");
+
+    printMsg("=== Welcome to TR. Decoders Fortune Cookie ===")
+    console.log("Today your color focus should be everything " + color[colorIndex] +".");
+
+    console.log("");
+    console.log("Reflect heavily on this ... ");
+    console.log("'" + quote[quoteIndex] + "'");
+    console.log("");
+
+    console.log("Here are your lucky numbers: ");
+    printMsg(winningNums);
+}
+
+// Testing Features
+message();
