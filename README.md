@@ -20,3 +20,4 @@ Note:
 * includes function `fillLuckyNums(spots, choice)`: 
     * generate an array with length `spots`
     * fills in each index with a number between 1 and `choice`
+* includes creative extension ascii art
