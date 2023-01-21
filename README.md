@@ -17,22 +17,4 @@ Please note:
     1. colors with 7 variations
     2. quotes with 7 variations
     3. 7 unique lucky numbers chosen from 1 - 50
-* includes function to generate an array of chosen length and chosen range of numbers starting from 1
-
-```
-// Function: turns luckyNums[] into an array with length 'spots' filled with random numbers (1 to 'choice')
-const fillLuckyNums = (spots, choice) => {
-    while(luckyNums.length < spots) {
-        let randomNum = pickOneTo(choice);
-        if(!luckyNums.includes(randomNum)) {
-            luckyNums.push(randomNum);
-        }
-    }
-
-    const sortedLuck = luckyNums.sort(function(a,b) {
-        return a - b;
-    });
-
-    return sortedLuck;
-}
-```
+* includes function to generate an array of chosen length and range of numbers `fillLuckyNums(spots, choice)`
