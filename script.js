@@ -1,3 +1,25 @@
+// Function: picks a random number from 0 to num - 1
+const pickRandom = num => {
+    let random = Math.floor(Math.random() * num);
+    return random;
+}
+
+// Function: turns luckyNums[] into an array of random numbers from (0 to 'choice'-1) filling number of 'spots'
+const fillLuckyNums = (spots, choice) => {
+    while(luckyNums.length < spots) {
+        let randomNum = pickRandom(choice);
+        if(randomNum !== 0 && !luckyNums.includes(randomNum)) {
+            luckyNums.push(randomNum);
+        }
+    }
+
+    const sortedLuck = luckyNums.sort(function(a,b) {
+        return a - b;
+    });
+
+    return sortedLuck;
+}
+
 // Three pieces of data for message components
 const color = ["Lavender",
                 "Turquoise",
@@ -27,16 +49,10 @@ const quote = ["The only way to change the world is to change yourself.",
                 "The only way to do great work is to love what you do."];
 const luckyNums = [];
 
-// Function: filling luckyNums[] with numbers for choosing
-const fillLuckyNums = num => {
-    for(let i = 1; i <= num; i++) {
-        luckyNums.push(i);
-    }
-}
-
-// Filled luckyNums[] with numbers 1 - 50
-fillLuckyNums(50);
+// Fills luckyNums[] with 7 lucky numbers (1 - 50) for LottoMax 
+fillLuckyNums(7, 51);
 
 // Testing Features
 console.log(luckyNums);
+
 
