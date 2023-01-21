@@ -1,3 +1,4 @@
+// Three pieces of data for message components
 const color = ["Lavender",
                 "Turquoise",
                 "Tangerine",
@@ -26,12 +27,16 @@ const quote = ["The only way to change the world is to change yourself.",
                 "The only way to do great work is to love what you do."];
 const luckyNums = [];
 
+// Function: filling luckyNums[] with numbers for choosing
 const fillLuckyNums = num => {
     for(let i = 1; i <= num; i++) {
         luckyNums.push(i);
     }
 }
 
+// Filled luckyNums[] with numbers 1 - 50
 fillLuckyNums(50);
+
+// Testing Features
 console.log(luckyNums);
 
