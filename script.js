@@ -1,14 +1,14 @@
-// Function: picks a random number from 0 to num - 1
-const pickRandom = num => {
-    let random = Math.floor(Math.random() * num);
+// Function: picks a random number from 1 to num
+const pickOneTo = num => {
+    let random = Math.floor(Math.random() * num) + 1;
     return random;
 }
 
-// Function: turns luckyNums[] into an array of random numbers from (0 to 'choice'-1) filling number of 'spots'
+// Function: turns luckyNums[] into an array with length 'spots' filled with random numbers (1 to 'choice')
 const fillLuckyNums = (spots, choice) => {
     while(luckyNums.length < spots) {
-        let randomNum = pickRandom(choice);
-        if(randomNum !== 0 && !luckyNums.includes(randomNum)) {
+        let randomNum = pickOneTo(choice);
+        if(!luckyNums.includes(randomNum)) {
             luckyNums.push(randomNum);
         }
     }
@@ -50,9 +50,8 @@ const quote = ["The only way to change the world is to change yourself.",
 const luckyNums = [];
 
 // Fills luckyNums[] with 7 lucky numbers (1 - 50) for LottoMax 
-fillLuckyNums(7, 51);
+fillLuckyNums(7, 50);
 
 // Testing Features
-console.log(luckyNums);
-
+console.log(luckyNums.join(" "));
 
